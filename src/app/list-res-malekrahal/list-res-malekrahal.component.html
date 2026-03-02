@@ -1,0 +1,17 @@
+<h2>Liste des Résidences</h2>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let res of residences">
+    {{ res.name }}
+
+    <button
+      class="btn btn-sm btn-primary float-end"
+      (click)="showDetails(res.id!)">
+      Détails
+    </button>
+  </li>
+</ul>
+
+<a routerLink="/add-residence" class="btn btn-success mt-3">
+  Ajouter Résidence
+</a>

@@ -1,0 +1,21 @@
+<h2>Détails Résidence</h2>
+
+<div *ngIf="residence">
+  <p><strong>Nom:</strong> {{ residence.name }}</p>
+  <p><strong>Adresse:</strong> {{ residence.address }}</p>
+  <p><strong>Status:</strong> {{ residence.status }}</p>
+
+  <p>
+    <strong>Image:</strong><br>
+    <img 
+      [src]="residence.image" 
+      alt="{{ residence.name }}" 
+      width="150">
+  </p>
+
+  <button 
+    class="btn btn-danger"
+    (click)="deleteResidence()">
+    Supprimer
+  </button>
+</div>
